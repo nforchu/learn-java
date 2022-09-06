@@ -1,17 +1,19 @@
 public class Student {
 
-    String firstname;
+    final String DATE_OF_BIRTH = "09/09/2000";
+
+    public String firstname;
     String lastname;
     int age;
     boolean present;
 
-    public float calculateScore() {
-         Calculator calculator = new Calculator();
-         return 0.0F;
+    public void showStudentName() {
+        this.firstname = "jones";
+        System.out.println(String.format("%s %s ", firstname, lastname));
     }
 
 
-    @Override
+   /* @Override
     public String toString() {
         return "Student{" +
                 "firstname='" + firstname + '\'' +
@@ -19,5 +21,5 @@ public class Student {
                 ", age=" + age +
                 ", present=" + present +
                 '}';
-    }
+    }*/
 }

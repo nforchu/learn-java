@@ -1,9 +1,11 @@
 public class ArithMeticOperator {
 
-    short a = 4;
+    short a = 7;
     short b = 5;
-    public int add() {
-        return a + b;
+
+
+    public short add() {
+        return (short)(a + b);
     }
 
     public int subtract() {
@@ -15,10 +17,12 @@ public class ArithMeticOperator {
     }
 
     public int divide() {
-        return a/b;
+        double result = a / (b * 1.0);
+        System.out.println(result);
+        return (int)result;
     }
 
-    public int modulus() {
-        return a % b;
+    public void modulus() {
+        System.out.println(a % b);
     }
 }
