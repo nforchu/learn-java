@@ -1,3 +1,5 @@
+package com.learnjava.students;
+
 public class LogicalOperator {
 
     void testLogicalAnd() {

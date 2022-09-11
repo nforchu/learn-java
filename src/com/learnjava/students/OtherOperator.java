@@ -1,3 +1,5 @@
+package com.learnjava.students;
+
 public class OtherOperator {
 
     public void testTernary() {

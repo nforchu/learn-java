@@ -1,4 +1,11 @@
+package com.learnjava;
+
 public class Alphabet {
+
+    String name;
+    protected  Alphabet(){
+
+    }
 
     /**
      * It prints out the capital and lowercase letters from A to Z
