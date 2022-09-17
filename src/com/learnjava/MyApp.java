@@ -1,11 +1,10 @@
 package com.learnjava;
 
 import com.learnjava.assignment.CoffeeMachine;
-import com.learnjava.students.Calculator;
-import com.learnjava.students.Drink;
-import com.learnjava.students.Result;
-import com.learnjava.students.Student;
+import com.learnjava.inheritance.*;
+import com.learnjava.students.*;
 
+import java.beans.beancontext.BeanContext;
 import java.util.Scanner;
 
 
@@ -18,6 +17,30 @@ public class MyApp {
     
     public static void main(String [] arg) {
 
+        Vehicle vehicle = new Car();
+        vehicle.start();
+
+        System.out.println("==================");
+        Vehicle vehicle1 = new AirPlane();
+        vehicle1.start();
+
+        /*SeaPlane seaPlane = new SeaPlane();
+        seaPlane.start();
+        seaPlane.moveWings();*/
+        //Car car = new Car("XYZ");
+        //car.start();
+
+        //AirPlane airPlane = new AirPlane();
+        //airPlane.start();
+
+        /**********************break and continue**********************/
+       /* BreakAndContinue bc = new BreakAndContinue();
+        bc.doContinue();*/
+
+
+       /***********************Coffee Machine assignment*******************************/
+       /* CoffeeMachine machine = new CoffeeMachine();
+        machine.start();*/
 
         /*****************************************loops**************************************************/
         // for (standard for loop/ enhanced for loop), while, do.. while

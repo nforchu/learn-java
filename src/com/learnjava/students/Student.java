@@ -12,13 +12,14 @@ public class Student {
     String name;
     int age;
     boolean present;
-    float average;
+    private float average;
 
     public static int numberOfStudents;
 
 
 
     public Student(){
+
         System.out.println("constructor ran");
         numberOfStudents++;
     }
