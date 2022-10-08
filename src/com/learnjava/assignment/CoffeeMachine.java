@@ -12,43 +12,53 @@ public class CoffeeMachine {
     Drink drink3  =  new Drink(3, "Cappuccino", 3.2F);
 
     Drink [] drinks = {drink1, drink2, drink3};
-    boolean running = false;
+    boolean running = true;
 
     public void start() {
-        running = true;
+
         while (running) {
             this.run();
         }
+
     }
 
     private void run() {
-        System.out.println("Welcome to Anderson coffee corner!!!!!");
-        System.out.println("Please, pick an item from the menu.");
-        for (Drink drink : drinks) {
-            System.out.println(String.format("%s. %s %s", drink.id, drink.name, drink.price));
-        }
+        try {
+            System.out.println("Welcome to Anderson coffee corner!!!!!");
+            System.out.println("Please, pick an item from the menu.");
+            for (Drink drink : drinks) {
+                System.out.println(String.format("%s. %s %s", drink.id, drink.name, drink.price));
+            }
 
-        System.out.print("Enter your choice 1, 2 or 3 : ");
-        Scanner scanner = new Scanner(System.in);
-        String exp = scanner.nextLine();
-        switch (exp) {
-            case "1":
-                displayOrder("Here is is cup of Hot cocoa for you");
-                break;
-            case "2":
-                displayOrder("Here is is cup of espresso for you");
-                break;
-            case "3":
-                displayOrder("Here is is cup of Cappuccino for you");
-                break;
-            case "shutdown":
-                System.out.println("The coffee machine will now shutdown");
-                System.out.println("Bye............");
-                //System.exit(0);
-                running = false;
-                break;
-            default:
-                System.out.println("**** Sorry we do not have an offer for that. Enter 1, 2 or 3 *****\n");
+            System.out.print("Enter your choice 1, 2 or 3. To exit enter 0: ");
+            Scanner scanner = new Scanner(System.in);
+            int exp = Integer.parseInt(scanner.nextLine());
+
+            switch (exp) {
+                case 1:
+                    displayOrder("Here is is cup of Hot cocoa for you");
+                    break;
+                case 2:
+                    displayOrder("Here is is cup of espresso for you");
+                    break;
+                case 3:
+                    displayOrder("Here is is cup of Cappuccino for you");
+                    break;
+                case 0:
+                    System.out.println("The coffee machine will now shutdown");
+                    System.out.println("Bye............");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("**** Sorry we do not have an offer for that. Enter 1, 2 or 3 *****\n");
+            }
+
+        } catch (NumberFormatException ex) {
+            //log the error
+            System.out.println("=========================================================");
+            System.out.println("Sorry, I can't understand your request. Please try again");
+            System.out.println("=========================================================");
+            run();
         }
 
 

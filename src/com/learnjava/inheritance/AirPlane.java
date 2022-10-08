@@ -13,4 +13,8 @@ public class AirPlane extends Plane{
     public  boolean stop(){
         return true;
     }
+
+    public void land(){
+        System.out.println("Land on runway");
+    }
 }

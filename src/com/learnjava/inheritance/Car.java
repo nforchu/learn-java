@@ -22,8 +22,18 @@ public class Car implements Vehicle {
         return true;
     }
 
+    @Override
     public  boolean stop(){
         return true;
+    }
+
+    public void shiftGear() {
+        System.out.println("Shift to another gear");
+    }
+
+
+    public static void engineCheck(){
+        System.out.println("Car engine check");
     }
 
 }
